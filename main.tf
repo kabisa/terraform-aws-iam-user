@@ -119,7 +119,7 @@ resource "aws_iam_policy" "mfa_policy" {
                 "iam:ResyncMFADevice"
             ],
             "Resource": [
-                "arn:aws:iam::*:mfa/$${aws:username}",
+                "arn:aws:iam::*:mfa/*",
                 "arn:aws:iam::*:user/$${aws:username}"
             ]
         },
@@ -130,7 +130,7 @@ resource "aws_iam_policy" "mfa_policy" {
                 "iam:DeactivateMFADevice"
             ],
             "Resource": [
-                "arn:aws:iam::*:mfa/$${aws:username}",
+                "arn:aws:iam::*:mfa/*",
                 "arn:aws:iam::*:user/$${aws:username}"
             ],
             "Condition": {
